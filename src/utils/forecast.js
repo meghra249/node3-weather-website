@@ -9,9 +9,6 @@ const forecast = (latitude,longitude,callback)=>{
         }else if(body.error){
             callback('Unable to fetch weather',undefined)
         }else{
-            callback(undefined,"Current temperature is:"+body.current.temperature 
-            +" Feels liks is:"+body.current.feelslike+" . Description:"+body.current.weather_descriptions)
-            
             callback(undefined,"It is currently:"+body.current.temperature +" degrees out."
             +" It feels like :"+body.current.feelslike+" . Weather is :"+body.current.weather_descriptions)
         }
